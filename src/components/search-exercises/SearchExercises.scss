@@ -1,0 +1,10 @@
+@import '../../styles/variables';
+
+.search-btn {
+    color: #fff;
+    min-height: 56px;
+    &:hover {
+        color: #FF2625 !important;
+        border: 1px solid #FF2625 !important;
+    }
+  }
