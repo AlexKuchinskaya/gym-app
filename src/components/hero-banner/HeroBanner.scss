@@ -1,0 +1,19 @@
+@import '../../styles/variables';
+
+.banner {
+    color: $red-2;
+    font-weight: 600;
+    font-size: 26px;
+}
+
+.banner-img {
+    position: absolute;
+    top: -330px;
+    right: 40px;
+    width: 700px;
+    height: 900px;
+    // margin-top: -330px;
+    @media screen and (max-width:1200px) {
+        display: none;
+    }
+}
