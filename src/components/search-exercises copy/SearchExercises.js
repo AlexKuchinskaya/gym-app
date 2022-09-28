@@ -2,13 +2,12 @@ import React, { useState, useEffect } from 'react'
 import { Box, Stack, Typography, Button, TextField } from '@mui/material';
 import './SearchExercises.scss';
 import { fetchData, execerciseOptions } from '../../utils/fetchData';
-import HorizontalScrollbar from '../../components/horizontal-scrollbar/HorizontalScrollbar';
+import HorizontalScrollbar from '../horizontal-scrollbar/HorizontalScrollbar';
 
-const SearchExercises = () => {
+const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
     const urlExercises = "https://exercisedb.p.rapidapi.com/exercises";
     const urlBodyParts = "https://exercisedb.p.rapidapi.com/exercises/bodyPartList";
     const [search, setSearch] = useState('');
-    const [exercises, setExercises] = useState([]);
     const [bodyParts, setBodyParts] = useState([]);
 
     useEffect(()=> {
@@ -69,7 +68,7 @@ const SearchExercises = () => {
                 </Button>
             </Box>
             <Box sx={{ position: 'relative' }}>
-                <HorizontalScrollbar data={bodyParts} />
+                <HorizontalScrollbar data={bodyParts} bodyPart={bodyPart} setBodyPart={setBodyPart} />
             </Box>
         </Stack>
     )

@@ -1,0 +1,14 @@
+@import '../../styles/variables';
+
+.body-part-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.body-part-card {
+    transform: scale(1, 1);
+    transition: 0.3s all ease-in-out;
+    &:hover {
+        transform: scale(1.1, 1.1);
+    }
+}
